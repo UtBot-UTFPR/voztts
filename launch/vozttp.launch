@@ -1,0 +1,12 @@
+<launch>
+<arg name="marytts_path" default="/home/dieisson/marytts-5.2" />
+
+<param name="language" value="en_US" />
+
+<node pkg="voztts" type="voztts.exe" name="voztts"
+      output="screen" required="true" args="">
+</node>
+
+<node pkg="voztts" type="marytts_server.bash" name="marytts_server"
+      output="screen" args="$(arg marytts_path)" />
+</launch>
