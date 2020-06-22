@@ -116,27 +116,27 @@ void callback(const std_msgs::String::ConstPtr& msg)
    //inicio emoção rage
      if (emotion_name == "rage") // rage
 	{
-         pitch = "100%";
+         pitch = "-70%";
          range = "120%";
-         rate = "95%"; // valor variavel para rage
+         rate = "95%"; 
          volume = "95%";
-         contour = "(100%,30%) (30%,100%) (100%,-30%) (-30%,100%)";
+         contour = "(0%,-10%) (50%,-10%) (80%,-10%)";
 	}
   else if (emotion_name == "annoyance") // annoyance
 	{
-         pitch = "-70%";
+         pitch = "-50%";
          range = "120%";
-         rate = "95%"; // valor variavel para rage
+         rate = "95%"; 
          volume = "95%";
-         contour = "(100%,30%) (30%,100%) (100%,-30%) (-30%,100%)";
+         contour = "(0%,-10%) (50%,-10%) (80%,-10%)";
 	}
   else if (emotion_name == "anger") // anger
 	{
-         pitch = "-50%";
+         pitch = "-60%";
          range = "120%";
-         rate = "95%"; // valor variavel para rage
+         rate = "95%"; 
          volume = "95%";
-         contour = "(100%,30%) (30%,100%) (100%,-30%) (-30%,100%)";
+         contour = "(0%,-10%) (50%,-10%) (80%,-10%)";
 	}
   //fim emoção rage
   //inicio emoção calma
@@ -177,31 +177,160 @@ void callback(const std_msgs::String::ConstPtr& msg)
   //fim emoção Terror
 
   //inicio emoção ecstasy
-  else if (emotion_name == "joy") // heppiness
+  else if (emotion_name == "ecstasy") // heppiness
 	{
-         pitch = "50%";
+         pitch = "+75%";
          range = "200%";
          rate = "90%";
          volume = "80%";
-         contour = "(-5%,25%)";
+         contour = "(0%, -5%) (80%, +25%)";
+	}
+  else if (emotion_name == "joy") // heppiness
+	{
+         pitch = "+50%";
+         range = "200%";
+         rate = "90%";
+         volume = "80%";
+         contour = "(0%, -5%) (80%, +25%)";
+	}
+  else if (emotion_name == "serenity") // heppiness
+	{
+         pitch = "+40%";
+         range = "200%";
+         rate = "90%";
+         volume = "80%";
+         contour = "(0%, -5%) (80%, +25%)";
 	}
   //fim emoção ecstasy
   //inicio emoção grief
-  else if (emotion_name == "sadness") // sadness
+  else if (emotion_name == "grief") // sadness
 	{
          pitch = "-30%";
          range = "70%";
          rate = "50%";
          volume = "40%";
-         contour = "(80%,-10%)";
+         contour = "(0%, 100%) (80%, -10%)";
 	}
+  else if (emotion_name == "sadness") // sadness
+	{
+         pitch = "-20%";
+         range = "70%";
+         rate = "50%";
+         volume = "40%";
+         contour = "(0%, 100%) (80%, -10%)";
+	}
+  else if (emotion_name == "pensiveness") // sadness
+	{
+         pitch = "-10%";
+         range = "70%";
+         rate = "50%";
+         volume = "40%";
+         contour = "(0%, 100%) (80%, -10%)";
+	}  
   //fim emoção grief
 
   //inicio emoção vigilance
+  else if (emotion_name == "vigilance") // 
+	{
+         pitch = "+5%";
+         range = "160%";
+         rate = "92%";
+         volume = "87%";
+         contour = "(0%,-10%) (50%,-25%)";
+	}
+    else if (emotion_name == "antecipation") // 
+	{
+         pitch = "+0%";
+         range = "160%";
+         rate = "92%";
+         volume = "87%";
+         contour = "(0%,-10%) (50%,-25%)";
+	} 
+    else if (emotion_name == "interest") // 
+	{
+         pitch = "-20%";
+         range = "160%";
+         rate = "92%";
+         volume = "87%";
+         contour = "(0%,-10%) (50%,-25%)";
+	}   
   //inicio emoção loathing
+  else if (emotion_name == "loathing") // 
+	{
+         pitch = "-50%";
+         range = "95%";
+         rate = "71%";
+         volume = "63%";
+         contour = "(80%,-10%)";
+	}
+  else if (emotion_name == "disgust") // 
+	{
+         pitch = "-40%";
+         range = "95%";
+         rate = "71%";
+         volume = "63%";
+         contour = "(80%,-10%)";
+	}
+  else if (emotion_name == "boredom") // 
+	{
+         pitch = "-30%";
+         range = "95%";
+         rate = "71%";
+         volume = "63%";
+         contour = "(80%,-10%)";
+	}
   //inicio emoção amazement
+  else if (emotion_name == "amazement") // 
+	{
+         pitch = "+35%";
+         range = "45%";
+         rate = "75%";
+         volume = "55%";
+         contour = "(50%, 100%) (80%,-10%)";
+	}
+   else if (emotion_name == "surprise") // 
+	{
+         pitch = "+25%";
+         range = "45%";
+         rate = "75%";
+         volume = "55%";
+         contour = "(50%, 100%) (80%,-10%)";
+	}
+   else if (emotion_name == "distraction") // nao sei para que usar isso, conversar com andre depois
+	{
+         pitch = "+20%";
+         range = "45%";
+         rate = "75%";
+         volume = "55%";
+         contour = "(50%, 100%) (80%,-10%)";
+	}
   //inicio emoção admiration
+  else if (emotion_name == "admiration") // 
+	{
+         pitch = "+87%";
+         range = "110%";
+         rate = "95%";
+         volume = "75%";
+         contour = "(50%, 100%) (0%, -5%) (80%, +25%)";
+	}
+  else if (emotion_name == "trust") // 
+	{
+         pitch = "+60%";
+         range = "110%";
+         rate = "95%";
+         volume = "75%";
+         contour = "(50%, 100%) (0%, -5%) (80%, +25%)";
+	}
+  else if (emotion_name == "acceptance") // 
+	{
+         pitch = "+45%";
+         range = "110%";
+         rate = "95%";
+         volume = "75%";
+         contour = "(50%, 100%) (0%, -5%) (80%, +25%)";
+	}
 }
+
 int main (int argc, char** argv) {
   srand(time(NULL));
   ros::init(argc, argv, "voztts"); //Initialise and create a ROS node
