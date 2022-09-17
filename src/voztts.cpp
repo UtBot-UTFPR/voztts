@@ -9,7 +9,7 @@
 #include <ros/package.h>
 #include <std_msgs/String.h>
 // voztts
-#include "voztts/cached_files_map.h"
+#include "../include/voztts/cached_files_map.h"
 
 
 enum Engine {

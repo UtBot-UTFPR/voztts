@@ -30,7 +30,7 @@ include_directories(include
   ${GDK-PixBuf_INCLUDE_DIRS}
   ${Glib_INCLUDE_DIRS}
   ${GOBJECT_INCLUDE_DIR}
-  ${LIBNOTIFY_INCLUDE_DIR}
+  # ${LIBNOTIFY_INCLUDE_DIR}
 )
 
 add_executable       (voztts.exe  src/voztts.cpp
