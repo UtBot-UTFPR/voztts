@@ -7,7 +7,7 @@ echo "autorestart arg: $1"
 if ! sudo docker ps --format '{{.Image}}' | grep -w synesthesiam/marytts:5.2 &> /dev/null; then
   echo "MaryTTS Server container not running yet."
   echo 'Running container...'
-  sudo docker run -d -it -p 59125:59125 synesthesiam/marytts:5.2 --voice cmu-slt-hsmm
+  sudo docker run -d -it -p 59125:59125 synesthesiam/marytts:5.2 --voice cmu-rms-hsmm
 else
   echo "MaryTTS Server container already running."
   if $1 == "true"; then
@@ -15,6 +15,6 @@ else
     sudo docker ps -q --filter ancestor=synesthesiam/marytts:5.2 | sudo xargs -r docker stop
     echo 'Stopped container!'
     echo 'Running container...'
-    sudo docker run -d -it -p 59125:59125 synesthesiam/marytts:5.2 --voice cmu-slt-hsmm
+    sudo docker run -d -it -p 59125:59125 synesthesiam/marytts:5.2 --voice cmu-rms-hsmm
   fi
 fi
