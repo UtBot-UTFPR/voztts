@@ -85,12 +85,12 @@ void tts_cb(const std_msgs::StringConstPtr & msg) {
     else
       command << "&LOCALE=" << _language;
     if (_language == "en")
-      command << "&VOICE=cmu-slt-hsmm"; // en_US female hmm
+      command << "&VOICE=cmu-bdl-hsmm"; // en_US male hmm
     else if (_language == "fr")
       command << "&VOICE=upmc-pierre-hsmm"; // fr male hmm
     else {
       ROS_WARN("TESTE language'%s'", _language.c_str());
-      command << "&VOICE=cmu-slt-hsmm"; // en_US female hmm
+      command << "&VOICE=cmu-bdl-hsmm"; // en_US male hmm
     }
     //command << ("%s",effects.c_str());
     //command << "&INPUT_TEXT=" << "<?xml version=\'1.0\' encoding=\'UTF-8\'?>\n<maryxml version=\'0.4\'\nxmlns:xsi=\'http://www.w3.org/2001/XMLSchema-instance\'\nxmlns=\'http://mary.dfki.de/2002/MaryXML\'\nxml:lang=\'en-US\'>\n\n<prosody pitch=\'+50%\' range=\'200%\' rate=\'90%\' volume=\'80%\' contour=\'(10%,+80%)\' >\n i am so happy Dieisson.\n</prosody>\n</maryxml>\n";

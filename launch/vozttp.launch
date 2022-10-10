@@ -5,6 +5,5 @@
 
       <arg name="autorestart" default="false" />
       <node pkg="voztts" type="marytts_server.bash" name="marytts_server"
-            output="screen"  launch-prefix="sudo -S" args="$(arg autorestart)"/>
-      
+            output="screen"  args="$(arg autorestart)"/>
 </launch>
